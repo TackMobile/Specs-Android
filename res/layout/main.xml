@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+   		android:background="#ebeaea"
+   		android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/share_btn" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="2" >
+
+
+            <TableRow>
+                <TextView
+                    android:text="@string/operating_system"
+                	style="@style/ListHeader" />
+            </TableRow>
+            <View style="@style/ListSeparator" />
+
+
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/sdk_version"
+                    style="@style/ListItem" />
+                <TextView 
+                    android:id="@+id/sdk_ver_text"
+                    style="@style/ListValue" />
+            </TableRow>
+
+            <TableRow  
+                style="@style/ListRow"
+                android:gravity="center_vertical" >
+                <TextView
+                    android:text="@string/release"
+                    style="@style/ListItem" />
+                <TextView 
+                    android:id="@+id/release_text"
+                    style="@style/ListValue" />
+            </TableRow>
+            
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/locale"
+                    style="@style/ListItem" />
+                <TextView
+                    android:id="@+id/locale_text"
+                    style="@style/ListValue" />
+            </TableRow>
+
+
+
+           	<TableRow>
+                <TextView
+                    android:text="@string/screen"
+                	style="@style/ListHeader" />
+            </TableRow>
+            <View style="@style/ListSeparator" />
+
+
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/size"
+                    style="@style/ListItem" />
+                <TextView
+                    android:id="@+id/size_text"
+                    style="@style/ListValue" />
+            </TableRow>
+
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/resoultion"
+                    style="@style/ListItem" />
+                <TextView
+                    android:id="@+id/dpi_qual_text"
+                    style="@style/ListValue" />
+            </TableRow>
+
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/dpi"
+                    style="@style/ListItem" />
+                <TextView
+                    android:id="@+id/dpi_text"
+                    style="@style/ListValue" />
+            </TableRow>
+
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/width_height"
+                    style="@style/ListItem" />
+                <TextView
+                    android:id="@+id/width_height_px_text"
+                    style="@style/ListValue" />
+            </TableRow>
+
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:id="@+id/width_height_dp_text"
+                    style="@style/ListValue"
+                    android:layout_column="1" />
+            </TableRow>
+
+           <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/density_multiplier"
+                    style="@style/ListItem" />
+                <TextView
+                    android:id="@+id/dx_text"
+                    style="@style/ListValue" />
+            </TableRow>
+
+
+
+			<TableRow>
+                <TextView
+                    android:text="@string/other"
+                	style="@style/ListHeader" />
+            </TableRow>
+            <View style="@style/ListSeparator" />
+
+
+            <TableRow style="@style/ListRow" >
+                <TextView
+                    android:text="@string/font_scale"
+                    style="@style/ListItem" />
+                <TextView
+                    android:id="@+id/fontscale_text"
+                    style="@style/ListValue" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/share_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/share" />
+
+</RelativeLayout>
