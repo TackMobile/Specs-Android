@@ -82,6 +82,15 @@
                         android:id="@+id/release_text"
                         style="@style/ListValue" />
                 </TableRow>
+                
+                <TableRow style="@style/ListRow" >
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/codename" />
+                    <TextView
+                        android:id="@+id/codename_text"
+                        style="@style/ListValue" />
+                </TableRow>
 
                 <TableRow style="@style/ListRow" >
                     <TextView

@@ -25,5 +25,21 @@
     <string name="operating_system">OPERATING SYSTEM</string>
     <string name="screen">SCREEN</string>
     <string name="other">OTHER</string>
+    <string name="codename">Codename</string>
+    <string-array name="version_code">
+        <item >Base</item>
+        <item >Base 1.1</item>
+        <item >Cupcake</item>
+        <item >Donut</item>
+        <item >Eclaire</item>
+        <item >Eclair 0.1</item>
+        <item >Eclair MR1</item>
+        <item >Froyo</item>
+        <item >Gingerbread</item>
+        <item >Gingerbread MR1</item>
+        <item >Honeycomb</item>
+        <item >Honeycomb MR1</item>
+        <item >Honeycomb MR2</item>
+    </string-array>
 
 </resources>

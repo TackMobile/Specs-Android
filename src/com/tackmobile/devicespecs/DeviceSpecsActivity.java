@@ -14,6 +14,7 @@ public class DeviceSpecsActivity extends Activity
 {
 	private int    sdkVer;
 	private String release;
+	private String codename;
 	private String locale;
 	private String size;
 	private String dpiQual;
@@ -37,6 +38,7 @@ public class DeviceSpecsActivity extends Activity
 		String stats =
 			"SDK Version: "        + sdkVer    + "\n" +
 			"Release: "            + release   + "\n" +
+			"Codename: "           + codename  + "\n" +
 			"Locale: "             + locale    + "\n" +
 			"Size: "               + size      + "\n" +
 			"Resolution: "         + dpiQual   + "\n" +
@@ -69,6 +71,7 @@ public class DeviceSpecsActivity extends Activity
 		
 		sdkVer    = Build.VERSION.SDK_INT;
 		release   = Build.VERSION.RELEASE;
+		codename  = getResources().getStringArray(R.array.version_code)[sdkVer-1];
 		locale    = config.locale.getDisplayName();
 		size      = getSize(config);
 		dpiQual   = getDpi(dm);
@@ -85,6 +88,7 @@ public class DeviceSpecsActivity extends Activity
 	{
 		TextView sdkVerText = (TextView) findViewById(R.id.sdk_ver_text);
 		TextView releaseText = (TextView) findViewById(R.id.release_text);
+		TextView codenameText = (TextView) findViewById(R.id.codename_text);
 		TextView localeText = (TextView) findViewById(R.id.locale_text);
 		TextView sizeText = (TextView) findViewById(R.id.size_text);
 		TextView dpiQualText = (TextView) findViewById(R.id.dpi_qual_text);
@@ -96,6 +100,7 @@ public class DeviceSpecsActivity extends Activity
 		
 		sdkVerText.setText(String.valueOf(sdkVer));
 		releaseText.setText(release);
+		codenameText.setText(codename);
 		localeText.setText(locale);
 		sizeText.setText(size);
 		dpiQualText.setText(dpiQual);
