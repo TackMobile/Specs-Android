@@ -20,7 +20,7 @@
 		    android:layout_height="match_parent" />
 		
 		<ImageButton
-		    android:src="@drawable/share"
+		    android:src="@drawable/share_btn"
 		    android:background="@null"
 		    android:clickable="true"
 		    android:onClick="share"
