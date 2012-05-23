@@ -168,8 +168,11 @@
                 </TableRow>
             </TableLayout>
 
-            <ImageView
+            <ImageButton
                 android:src="@drawable/tack_logo"
+		    	android:background="@null"
+		    	android:clickable="true"
+		    	android:onClick="visitTackWebsite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp" />

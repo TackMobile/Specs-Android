@@ -3,6 +3,7 @@ package com.tackmobile.devicespecs;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -52,6 +53,13 @@ public class DeviceSpecsActivity extends Activity
 		i.putExtra(Intent.EXTRA_TEXT, stats);
 		
 		startActivity(Intent.createChooser(i, "Send Device Stats"));
+	}
+	
+	public void visitTackWebsite(View v)
+	{
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse("http://www.tackmobile.com"));
+		startActivity(i);
 	}
 	
 	private void loadStats()
