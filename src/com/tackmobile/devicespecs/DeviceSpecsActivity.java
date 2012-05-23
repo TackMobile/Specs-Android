@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class DeviceSpecsActivity extends Activity
 {
-	private String stats = "";
 	private int    sdkVer;
 	private String release;
 	private String locale;
@@ -34,6 +33,18 @@ public class DeviceSpecsActivity extends Activity
 
 	public void share(View v)
 	{
+		String stats =
+			"SDK Version: "        + sdkVer    + "\n" +
+			"Release: "            + release   + "\n" +
+			"Locale: "             + locale    + "\n" +
+			"Size: "               + size      + "\n" +
+			"Resolution: "         + dpiQual   + "\n" +
+			"DPI: "                + dpi       + "\n" +
+			"Screen Size (px): "   + whPx      + "\n" +
+			"Screen Size (dp): "   + whDp      + "\n" +
+			"Density Multiplier: " + dx        + "\n" +
+			"Font Scale: "         + fontScale;
+		
 		Intent i = new Intent(android.content.Intent.ACTION_SEND);
 		
 		i.setType("plain/text");
@@ -59,21 +70,10 @@ public class DeviceSpecsActivity extends Activity
 		dx        = String.valueOf(dm.density);
 		fontScale = String.valueOf(config.fontScale);
 		
-		stats = "SDK Version: "        + sdkVer    + "\n" +
-				"Release: "            + release   + "\n" +
-				"Locale: "             + locale    + "\n" +
-				"Size: "               + size      + "\n" +
-				"Resolution: "         + dpiQual   + "\n" +
-				"DPI: "                + dpi       + "\n" +
-				"Screen Size (px): "   + whPx      + "\n" +
-				"Screen Size (dp): "   + whDp      + "\n" +
-				"Density Multiplier: " + dx        + "\n" +
-				"Font Scale: "         + fontScale;
-		
-		displayStats();
+		updateViews();
 	}
 	
-	private void displayStats()
+	private void updateViews()
 	{
 		TextView sdkVerText = (TextView) findViewById(R.id.sdk_ver_text);
 		TextView releaseText = (TextView) findViewById(R.id.release_text);
