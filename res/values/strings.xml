@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Display Specs:</string>
+    <string name="app_name">Specs</string>
     <string name="resoultion">Resoultion</string>
     <string name="size">Size</string>
     <string name="dpi">DPI</string>

@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class DeviceSpecsActivity extends Activity implements OnClickListener {
+public class DeviceSpecsActivity extends Activity {
 
 	private String stats = "";
 
@@ -22,7 +22,7 @@ public class DeviceSpecsActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.main);
 
 		buildStats();
-		findViewById(R.id.share_btn).setOnClickListener(this);
+		//findViewById(R.id.share_btn).setOnClickListener(this);
 	}
 
 	public void buildStats() {
@@ -125,8 +125,7 @@ public class DeviceSpecsActivity extends Activity implements OnClickListener {
 		stats = sb.toString();
 	}
 
-	@Override
-	public void onClick(View v) {
+	public void share(View v) {
 		Intent i = new Intent(Intent.ACTION_SENDTO);
 		i.putExtra(Intent.EXTRA_EMAIL, "support@tackmobile.com");
 		i.putExtra(Intent.EXTRA_TEXT, stats);

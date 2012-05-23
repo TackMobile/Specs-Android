@@ -5,26 +5,26 @@
         <item name="android:paddingBottom">8dp</item>
     </style>
     <style name="ListHeader">
+        <item name="android:paddingLeft">10dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">#FF909090</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="ListSeparator">
         <item name="android:background">#FF909090</item>
-        <item name="android:layout_height">2dip</item>
-        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
     </style>
     <style name="ListItem">
-        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
         <item name="android:paddingRight">10dp</item>
         <item name="android:textColor">#000000</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
     </style>
     <style name="ListValue">
         <item name="android:textColor">#0099CC</item>
-        <item name="android:textSize">17sp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>
