@@ -51,7 +51,7 @@ public class DeviceSpecsActivity extends Activity
 		Intent i = new Intent(android.content.Intent.ACTION_SEND);
 		
 		i.setType("plain/text");
-		i.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@tackmobile.com"});
+		i.putExtra(Intent.EXTRA_EMAIL, new String[]{"specs@tackmobile.com"});
 		i.putExtra(Intent.EXTRA_TEXT, stats);
 		
 		startActivity(Intent.createChooser(i, "Send Device Stats"));
