@@ -40,30 +40,29 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040000;
-        public static final int codename=0x7f040018;
-        public static final int density_multiplier=0x7f040008;
-        public static final int dpi=0x7f040003;
-        public static final int font_scale=0x7f040014;
-        public static final int hdpi=0x7f04000c;
-        public static final int large=0x7f040006;
-        public static final int ldpi=0x7f04000a;
-        public static final int locale=0x7f040013;
-        public static final int mdpi=0x7f04000b;
-        public static final int normal=0x7f040005;
-        public static final int operating_system=0x7f040015;
-        public static final int other=0x7f040017;
-        public static final int release=0x7f040011;
-        public static final int resoultion=0x7f040001;
-        public static final int screen=0x7f040016;
-        public static final int sdk_version=0x7f040010;
-        public static final int share=0x7f040009;
-        public static final int size=0x7f040002;
-        public static final int small=0x7f040004;
-        public static final int tvdpi=0x7f04000e;
-        public static final int undefined=0x7f040007;
-        public static final int unknown_dpi=0x7f04000f;
-        public static final int width_height=0x7f040012;
-        public static final int xhdpi=0x7f04000d;
+        public static final int codename=0x7f040004;
+        public static final int density_multiplier=0x7f040015;
+        public static final int dpi=0x7f040013;
+        public static final int font_scale=0x7f040017;
+        public static final int hdpi=0x7f04000f;
+        public static final int large=0x7f04000a;
+        public static final int ldpi=0x7f04000d;
+        public static final int locale=0x7f040005;
+        public static final int mdpi=0x7f04000e;
+        public static final int normal=0x7f040009;
+        public static final int operating_system=0x7f040001;
+        public static final int other=0x7f040016;
+        public static final int release=0x7f040003;
+        public static final int resoultion=0x7f04000c;
+        public static final int screen=0x7f040006;
+        public static final int sdk_version=0x7f040002;
+        public static final int size=0x7f040007;
+        public static final int small=0x7f040008;
+        public static final int tvdpi=0x7f040011;
+        public static final int undefined=0x7f04000b;
+        public static final int unknown_dpi=0x7f040012;
+        public static final int width_height=0x7f040014;
+        public static final int xhdpi=0x7f040010;
     }
     public static final class style {
         public static final int ListHeader=0x7f060001;

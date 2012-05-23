@@ -1,5 +1,6 @@
 package com.tackmobile.devicespecs;
 
+import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -12,47 +13,40 @@ import android.widget.TextView;
 
 public class DeviceSpecsActivity extends Activity
 {
-	private int    sdkVer;
-	private String release;
-	private String codename;
-	private String locale;
-	private String size;
-	private String dpiQual;
-	private String dpi;
-	private String whPx;
-	private String whDp;
-	private String dx;
-	private String fontScale;
+	private ArrayList<Stat> osStats;
+	private ArrayList<Stat> screenStats;
+	private ArrayList<Stat> otherStats;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
 		loadStats();
 	}
 
 	public void share(View v)
 	{
-		String stats =
-			"SDK Version: "        + sdkVer    + "\n" +
-			"Release: "            + release   + "\n" +
-			"Codename: "           + codename  + "\n" +
-			"Locale: "             + locale    + "\n" +
-			"Size: "               + size      + "\n" +
-			"Resolution: "         + dpiQual   + "\n" +
-			"DPI: "                + dpi       + "\n" +
-			"Screen Size (px): "   + whPx      + "\n" +
-			"Screen Size (dp): "   + whDp      + "\n" +
-			"Density Multiplier: " + dx        + "\n" +
-			"Font Scale: "         + fontScale;
+		String email = "";
+		
+		email += getString(R.string.operating_system) + "\n";
+		for(Stat s : osStats) {
+			email += s.getName() + ": " + s.getValue() + "\n";
+		}
+		email += "\n" + getString(R.string.screen) + "\n";
+		for(Stat s : screenStats) {
+			email += s.getName() + ": " + s.getValue() + "\n";
+		}
+		email += "\n" + getString(R.string.other) + "\n";
+		for(Stat s : otherStats) {
+			email += s.getName() + ": " + s.getValue() + "\n";
+		}
 		
 		Intent i = new Intent(android.content.Intent.ACTION_SEND);
 		
 		i.setType("plain/text");
 		i.putExtra(Intent.EXTRA_EMAIL, new String[]{"specs@tackmobile.com"});
-		i.putExtra(Intent.EXTRA_TEXT, stats);
+		i.putExtra(Intent.EXTRA_TEXT, email);
 		
 		startActivity(Intent.createChooser(i, "Send Device Stats"));
 	}
@@ -64,51 +58,100 @@ public class DeviceSpecsActivity extends Activity
 		startActivity(i);
 	}
 	
+	private class Stat
+	{
+		private TextView view;
+		private String name;
+		private String value;
+		
+		public Stat(int statName, String statValue, TextView textView)
+		{
+			view = textView;
+			name = getString(statName);
+			value = statValue;
+		}
+		
+		public String getName()
+		{
+			return name;
+		}
+		
+		public String getValue()
+		{
+			return value;
+		}
+		
+		public void updateView()
+		{
+			view.setText(value);
+		}
+	}
+	
 	private void loadStats()
 	{
+		osStats = new ArrayList<Stat>();
+		screenStats = new ArrayList<Stat>();
+		otherStats = new ArrayList<Stat>();
+		
 		final Configuration config = getResources().getConfiguration();
 		final DisplayMetrics dm = new DisplayMetrics();
 		
-		sdkVer    = Build.VERSION.SDK_INT;
-		release   = Build.VERSION.RELEASE;
-		codename  = getResources().getStringArray(R.array.version_code)[sdkVer-1];
-		locale    = config.locale.getDisplayName();
-		size      = getSize(config);
-		dpiQual   = getDpi(dm);
-		dpi       = String.valueOf(dm.densityDpi);
-		whPx      = getScreenSizePx(dm);
-		whDp      = getScreenSizeDp(dm);
-		dx        = String.valueOf(dm.density);
-		fontScale = String.valueOf(config.fontScale);
+		// operating system
+		String sdkVer   = String.valueOf(Build.VERSION.SDK_INT);
+		String release  = Build.VERSION.RELEASE;
+		String codename = getResources().getStringArray(R.array.version_code)[Integer.valueOf(sdkVer)-1];
+		String locale   = config.locale.getDisplayName();
+
+		TextView sdkVerView   = (TextView) findViewById(R.id.sdk_ver_text);
+		TextView releaseView  = (TextView) findViewById(R.id.release_text);
+		TextView codenameView = (TextView) findViewById(R.id.codename_text);
+		TextView localeView   = (TextView) findViewById(R.id.locale_text);
 		
-		updateViews();
-	}
-	
-	private void updateViews()
-	{
-		TextView sdkVerText = (TextView) findViewById(R.id.sdk_ver_text);
-		TextView releaseText = (TextView) findViewById(R.id.release_text);
-		TextView codenameText = (TextView) findViewById(R.id.codename_text);
-		TextView localeText = (TextView) findViewById(R.id.locale_text);
-		TextView sizeText = (TextView) findViewById(R.id.size_text);
-		TextView dpiQualText = (TextView) findViewById(R.id.dpi_qual_text);
-		TextView dpiText = (TextView) findViewById(R.id.dpi_text);
-		TextView whPxText = (TextView) findViewById(R.id.width_height_px_text);
-		TextView whDpText = (TextView) findViewById(R.id.width_height_dp_text);
-		TextView dxText = (TextView) findViewById(R.id.dx_text);
-		TextView fontScaleText = (TextView) findViewById(R.id.fontscale_text);
+		osStats.add(new Stat(R.string.sdk_version, sdkVer,   sdkVerView));
+		osStats.add(new Stat(R.string.release,     release,  releaseView));
+		osStats.add(new Stat(R.string.codename,    codename, codenameView));
+		osStats.add(new Stat(R.string.locale,      locale,   localeView));
+
+		for(Stat s : osStats) {
+			s.updateView();
+		}
 		
-		sdkVerText.setText(String.valueOf(sdkVer));
-		releaseText.setText(release);
-		codenameText.setText(codename);
-		localeText.setText(locale);
-		sizeText.setText(size);
-		dpiQualText.setText(dpiQual);
-		dpiText.setText(dpi);
-		whPxText.setText(whPx);
-		whDpText.setText(whDp);
-		dxText.setText(dx);		
-		fontScaleText.setText(fontScale);
+		// screen
+		String size    = getSize(config);
+		String dpiQual = getDpi(dm);
+		String dpi     = String.valueOf(dm.densityDpi);
+		String whPx    = getScreenSizePx(dm);
+		String whDp    = getScreenSizeDp(dm);
+		String dx      = String.valueOf(dm.density);
+
+		TextView sizeView    = (TextView) findViewById(R.id.size_text);
+		TextView dpiQualView = (TextView) findViewById(R.id.dpi_qual_text);
+		TextView dpiView     = (TextView) findViewById(R.id.dpi_text);
+		TextView whPxView    = (TextView) findViewById(R.id.width_height_px_text);
+		TextView whDpView    = (TextView) findViewById(R.id.width_height_dp_text);
+		TextView dxView      = (TextView) findViewById(R.id.dx_text);
+		
+		screenStats.add(new Stat(R.string.size,               size,    sizeView));
+		screenStats.add(new Stat(R.string.resoultion,         dpiQual, dpiQualView));
+		screenStats.add(new Stat(R.string.dpi,                dpi,     dpiView));
+		screenStats.add(new Stat(R.string.width_height,       whPx,    whPxView));
+		screenStats.add(new Stat(R.string.width_height,       whDp,    whDpView));
+		screenStats.add(new Stat(R.string.density_multiplier, dx,      dxView));
+		
+		for(Stat s : screenStats) {
+			s.updateView();
+		}
+		
+		// other
+		String fontScale = String.valueOf(config.fontScale);
+		
+		TextView fontScaleView = (TextView) findViewById(R.id.fontscale_text);
+		
+		otherStats.add(new Stat(R.string.font_scale, fontScale, fontScaleView));
+		
+		for(Stat s : otherStats) {
+			s.updateView();
+		}
 	}
 	
 	private String getSize(Configuration config)
