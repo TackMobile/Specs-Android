@@ -35,6 +35,9 @@ public class DeviceSpecsActivity extends Activity
 
 	public void share(View v)
 	{
+		// TODO: Replace this with a StringBuilder using append instead of + or 
+		// 	format with String.format using a single string with substitutions 
+		//  like String.format("SDK Version: %s\nRelease: %s...", sdkVer, release,... etc...
 		String stats =
 			"SDK Version: "        + sdkVer    + "\n" +
 			"Release: "            + release   + "\n" +
@@ -68,10 +71,11 @@ public class DeviceSpecsActivity extends Activity
 	{
 		final Configuration config = getResources().getConfiguration();
 		final DisplayMetrics dm = new DisplayMetrics();
+		final String[] codenames = getResources().getStringArray(R.array.version_code);
 		
 		sdkVer    = Build.VERSION.SDK_INT;
 		release   = Build.VERSION.RELEASE;
-		codename  = getResources().getStringArray(R.array.version_code)[sdkVer-1];
+		codename  = codenames[Math.min(sdkVer-1, codenames.length-1)];
 		locale    = config.locale.getDisplayName();
 		size      = getSize(config);
 		dpiQual   = getDpi(dm);

@@ -9,6 +9,8 @@ package com.tackmobile.devicespecs;
 
 public final class R {
     public static final class array {
+        /**  16+ ??? 
+         */
         public static final int version_code=0x7f050000;
     }
     public static final class attr {
