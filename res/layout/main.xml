@@ -89,6 +89,7 @@
                         android:text="@string/codename" />
                     <TextView
                         android:id="@+id/codename_text"
+                        android:ellipsize="marquee"
                         style="@style/ListValue" />
                 </TableRow>
 

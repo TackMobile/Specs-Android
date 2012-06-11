@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Specs</string>
-    <string name="resoultion">Resoultion</string>
+    <string name="operating_system">OPERATING SYSTEM</string>
+    <string name="sdk_version">SDK Version</string>
+    <string name="release">Release</string>
+    <string name="locale">Locale</string>
+    <string name="screen">SCREEN</string>
     <string name="size">Size</string>
-    <string name="dpi">DPI</string>
     <string name="small">SMALL</string>
     <string name="normal">NORMAL</string>
     <string name="large">LARGE</string>
     <string name="undefined">UNDEFINED</string>
-    <string name="density_multiplier">Density Multiplier</string>
-    <string name="share">Share</string>
+    <string name="resoultion">Resolution</string>
     <string name="ldpi">LDPI</string>
     <string name="mdpi">MDPI</string>
     <string name="hdpi">HDPI</string>
     <string name="xhdpi">XHDPI</string>
     <string name="tvdpi">TVDPI</string>
     <string name="unknown_dpi">\?DPI</string>
-    <string name="sdk_version">SDK Version</string>
-    <string name="release">Release</string>
+    <string name="dpi">DPI</string>
     <string name="width_height">Width/Height</string>
-    <string name="locale">Locale</string>
-    <string name="font_scale">Font Scale</string>
-    <string name="operating_system">OPERATING SYSTEM</string>
-    <string name="screen">SCREEN</string>
-    <string name="other">OTHER</string>
+    <string name="density_multiplier">Density Multiplier</string>
+	<string name="other">OTHER</string>
     <string name="codename">Codename</string>
+    <string name="font_scale">Font Scale</string>
+    
     <string-array name="version_code">
         <item >Base</item>					<!-- API 1 -->
         <item >Base 1.1</item>				<!-- API 2 -->
@@ -44,5 +43,5 @@
         <item >Ice Cream Sandwich MR1</item><!-- API 15, 4.0.3 -->
         <item >Unknown Build</item>			<!-- 16+ ??? -->
     </string-array>
-
+    
 </resources>
