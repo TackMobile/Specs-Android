@@ -24,6 +24,7 @@
 	<string name="other">OTHER</string>
     <string name="codename">Codename</string>
     <string name="font_scale">Font Scale</string>
+    <string name="send_device_specs">Send Device Specs</string>
     
     <string-array name="version_code">
         <item >Base</item>					<!-- API 1 -->

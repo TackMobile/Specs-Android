@@ -63,6 +63,7 @@ public final class R {
         public static final int resoultion=0x7f05000b;
         public static final int screen=0x7f050005;
         public static final int sdk_version=0x7f050002;
+        public static final int send_device_specs=0x7f050018;
         public static final int size=0x7f050006;
         public static final int small=0x7f050007;
         public static final int tvdpi=0x7f050010;

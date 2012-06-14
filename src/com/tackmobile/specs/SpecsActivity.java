@@ -52,7 +52,7 @@ public class SpecsActivity extends Activity
 		i.putExtra(Intent.EXTRA_EMAIL, new String[]{"specs@tackmobile.com"});
 		i.putExtra(Intent.EXTRA_TEXT, email);
 		
-		startActivity(Intent.createChooser(i, "Send Device Stats"));
+		startActivity(Intent.createChooser(i, getString(R.string.send_device_specs)));
 	}
 	
 	public void visitTackWebsite(View v)
