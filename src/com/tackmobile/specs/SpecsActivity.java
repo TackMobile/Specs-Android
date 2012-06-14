@@ -1,4 +1,4 @@
-package com.tackmobile.devicespecs;
+package com.tackmobile.specs;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.TextView;
 
-public class DeviceSpecsActivity extends Activity
+public class SpecsActivity extends Activity
 {
 	private ArrayList<Stat> osStats;
 	private ArrayList<Stat> screenStats;

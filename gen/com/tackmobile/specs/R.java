@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.tackmobile.devicespecs;
+package com.tackmobile.specs;
 
 public final class R {
     public static final class array {
