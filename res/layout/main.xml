@@ -1,72 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:id="@+id/action_bar"
-   		android:background="#ffffff"
-    	android:layout_width="match_parent"
-    	android:layout_height="48dp"
-   		android:padding="8dp" >
-		
-		<TextView 
-		    android:text="@string/app_name"
-		    android:textColor="#000000"
-		    android:textSize="18sp"
-		    android:gravity="center_vertical"
-		    android:layout_width="wrap_content"
-		    android:layout_height="match_parent" />
-		
-		<ImageButton
-		    android:src="@drawable/share_btn"
-		    android:background="@null"
-		    android:clickable="true"
-		    android:onClick="share"
-    		android:layout_alignParentRight="true"
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        android:padding="8dp" >
 
-	</RelativeLayout>
-	
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@color/tack_blue"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:clickable="true"
+            android:onClick="share"
+            android:src="@drawable/share_btn" />
+    </RelativeLayout>
+
     <View
-		android:background="#0099CC"
-		android:layout_width="match_parent"
-		android:layout_height="3dp" />
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#0099CC" />
+
     <View
-		android:background="#b0b0b0"
-		android:layout_width="match_parent"
-		android:layout_height="1dp" />
-    
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b0b0b0" />
+
     <ScrollView
         android:id="@+id/spec_list"
-   		android:background="#ebeaea"
-   		android:padding="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:background="#ebeaea"
+        android:padding="8dp" >
 
         <LinearLayout
-   			android:orientation="vertical"
-    		android:layout_width="match_parent"
-    		android:layout_height="wrap_content" >
-    		
-    		<TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:stretchColumns="2" >
 
                 <TableRow>
+
                     <TextView
                         style="@style/ListHeader"
                         android:text="@string/operating_system" />
                 </TableRow>
+
                 <View style="@style/ListSeparator" />
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/sdk_version" />
+
                     <TextView
                         android:id="@+id/sdk_ver_text"
                         style="@style/ListValue" />
@@ -75,103 +79,126 @@
                 <TableRow
                     style="@style/ListRow"
                     android:gravity="center_vertical" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/release" />
+
                     <TextView
                         android:id="@+id/release_text"
                         style="@style/ListValue" />
                 </TableRow>
-                
+
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/codename" />
+
                     <TextView
                         android:id="@+id/codename_text"
-                        android:ellipsize="marquee"
-                        style="@style/ListValue" />
+                        style="@style/ListValue"
+                        android:ellipsize="marquee" />
                 </TableRow>
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/locale" />
+
                     <TextView
                         android:id="@+id/locale_text"
                         style="@style/ListValue" />
                 </TableRow>
 
                 <TableRow>
+
                     <TextView
                         style="@style/ListHeader"
                         android:text="@string/screen" />
                 </TableRow>
+
                 <View style="@style/ListSeparator" />
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/size" />
+
                     <TextView
                         android:id="@+id/size_text"
                         style="@style/ListValue" />
                 </TableRow>
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/resoultion" />
+
                     <TextView
                         android:id="@+id/dpi_qual_text"
                         style="@style/ListValue" />
                 </TableRow>
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/dpi" />
+
                     <TextView
                         android:id="@+id/dpi_text"
                         style="@style/ListValue" />
                 </TableRow>
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/width_height" />
+
                     <TextView
                         android:id="@+id/width_height_px_text"
                         style="@style/ListValue" />
                 </TableRow>
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         android:id="@+id/width_height_dp_text"
                         style="@style/ListValue"
                         android:layout_column="1" />
                 </TableRow>
-                
+
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/density_multiplier" />
+
                     <TextView
                         android:id="@+id/dx_text"
                         style="@style/ListValue" />
                 </TableRow>
 
                 <TableRow>
+
                     <TextView
                         style="@style/ListHeader"
                         android:text="@string/other" />
                 </TableRow>
+
                 <View style="@style/ListSeparator" />
 
                 <TableRow style="@style/ListRow" >
+
                     <TextView
                         style="@style/ListItem"
                         android:text="@string/font_scale" />
+
                     <TextView
                         android:id="@+id/fontscale_text"
                         style="@style/ListValue" />
@@ -179,16 +206,14 @@
             </TableLayout>
 
             <ImageButton
-                android:src="@drawable/tack_logo"
-		    	android:background="@null"
-		    	android:clickable="true"
-		    	android:onClick="visitTackWebsite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
-            
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="visitTackWebsite"
+                android:src="@drawable/tack_logo" />
         </LinearLayout>
-        
     </ScrollView>
 
 </LinearLayout>
