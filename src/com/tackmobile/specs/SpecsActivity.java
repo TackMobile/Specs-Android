@@ -28,30 +28,29 @@ public class SpecsActivity extends Activity
 
 	public void share(View v)
 	{
-		// TODO: Replace this with a StringBuilder using append instead of + or 
-		// 	format with String.format using a single string with substitutions 
-		//  like String.format("SDK Version: %s\nRelease: %s...", sdkVer, release,... etc...
-		String email = "";
-		
-		email += getString(R.string.operating_system) + "\n";
+		final StringBuilder sb = new StringBuilder();
+		sb.append(getString(R.string.operating_system)).append("\n");
 		for(Stat s : osStats) {
-			email += s.getName() + ": " + s.getValue() + "\n";
+			sb.append(s.getName()).append(": ").append(s.getValue()).append("\n");
 		}
-		email += "\n" + getString(R.string.screen) + "\n";
+		sb.append("\n").append(getString(R.string.screen)).append("\n");
 		for(Stat s : screenStats) {
-			email += s.getName() + ": " + s.getValue() + "\n";
+			sb.append(s.getName()).append(": ").append(s.getValue()).append("\n");
 		}
-		email += "\n" + getString(R.string.other) + "\n";
+		sb.append("\n").append(getString(R.string.other)).append("\n");
 		for(Stat s : otherStats) {
-			email += s.getName() + ": " + s.getValue() + "\n";
+			sb.append(s.getName()).append(": ").append(s.getValue()).append("\n");
 		}
+		sb.append("\n").append(getString(R.string.gathered_by_specs));
+		
+		String email = sb.toString();
 		
 		Intent i = new Intent(android.content.Intent.ACTION_SEND);
 		
 		i.setType("plain/text");
-		i.putExtra(Intent.EXTRA_EMAIL, new String[]{"specs@tackmobile.com"});
+		// TODO: Allow this to be defined via a broadcast receiver request to run this application
+		//i.putExtra(Intent.EXTRA_EMAIL, new String[]{"specs@tackmobile.com"});
 		i.putExtra(Intent.EXTRA_TEXT, email);
-		
 		startActivity(Intent.createChooser(i, getString(R.string.send_device_specs)));
 	}
 	
