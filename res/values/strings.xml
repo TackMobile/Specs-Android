@@ -41,6 +41,7 @@
         <item >Honeycomb MR2</item>			<!-- API 13 -->
         <item >Ice Cream Sandwich</item>	<!-- API 14, 4.0 -->
         <item >Ice Cream Sandwich MR1</item><!-- API 15, 4.0.3 -->
+        <item >Jellybean</item>             <!-- API 16 -->
         <item >Unknown Build</item>			<!-- 16+ ??? -->
     </string-array>
     
