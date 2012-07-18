@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.tackmobile.devicespecs;
+package com.tackmobile.specs;
 
 public final class R {
     public static final class array {
@@ -51,6 +51,7 @@ public final class R {
         public static final int density_multiplier=0x7f050014;
         public static final int dpi=0x7f050012;
         public static final int font_scale=0x7f050017;
+        public static final int gathered_by_specs=0x7f050019;
         public static final int hdpi=0x7f05000e;
         public static final int large=0x7f050009;
         public static final int ldpi=0x7f05000c;
@@ -63,6 +64,7 @@ public final class R {
         public static final int resoultion=0x7f05000b;
         public static final int screen=0x7f050005;
         public static final int sdk_version=0x7f050002;
+        public static final int send_device_specs=0x7f050018;
         public static final int size=0x7f050006;
         public static final int small=0x7f050007;
         public static final int tvdpi=0x7f050010;
