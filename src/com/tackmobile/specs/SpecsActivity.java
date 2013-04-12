@@ -103,7 +103,13 @@ public class SpecsActivity extends Activity
 		// operating system
 		String sdkVer   = String.valueOf(Build.VERSION.SDK_INT);
 		String release  = Build.VERSION.RELEASE;
-		String codename  = codenames[Math.min(Build.VERSION.SDK_INT-1, codenames.length-1)];
+		
+		String codename;
+		if(Build.VERSION.SDK_INT >= codenames.length) {
+			codename = "Codename for " + Build.VERSION.CODENAME;
+		} else {
+			codename = codenames[Math.min(Build.VERSION.SDK_INT-1, codenames.length-1)];
+		}
 		String locale   = config.locale.getDisplayName();
 
 		TextView sdkVerView   = (TextView) findViewById(R.id.sdk_ver_text);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Specs</string>
     <string name="operating_system">OPERATING SYSTEM</string>
     <string name="sdk_version">SDK Version</string>
@@ -21,31 +22,31 @@
     <string name="dpi">DPI</string>
     <string name="width_height">Width/Height</string>
     <string name="density_multiplier">Density Multiplier</string>
-	<string name="other">OTHER</string>
+    <string name="other">OTHER</string>
     <string name="codename">Codename</string>
     <string name="font_scale">Font Scale</string>
     <string name="send_device_specs">Send Device Specs</string>
     <string name="gathered_by_specs">Gathered by Specs</string>
-    
+
     <string-array name="version_code">
-        <item >Base</item>					          <!-- API 1 -->
-        <item >Base 1.1</item>				        <!-- API 2 -->
-        <item >Cupcake</item>				          <!-- API 3 -->
-        <item >Donut</item>					          <!-- API 4 -->
-        <item >Eclaire</item>				          <!-- API 5 -->
-        <item >Eclair 0.1</item>			        <!-- API 6 -->
-        <item >Eclair MR1</item>			        <!-- API 7 -->
-        <item >Froyo</item>					          <!-- API 8 -->
-        <item >Gingerbread</item>			        <!-- API 9 -->
-        <item >Gingerbread MR1</item>		      <!-- API 10 -->
-        <item >Honeycomb</item>				        <!-- API 11 -->
-        <item >Honeycomb MR1</item>			      <!-- API 12 -->
-        <item >Honeycomb MR2</item>			      <!-- API 13 -->
-        <item >Ice Cream Sandwich</item>	    <!-- API 14, 4.0 -->
-        <item >Ice Cream Sandwich MR1</item>  <!-- API 15, 4.0.3 -->
-        <item >Jelly Bean</item>              <!-- API 16 -->
-        <item >Jelly Bean MR1</item>          <!-- API 17 -->
-        <item >Unknown Build</item>			      <!-- 18+ Key Lime Pie??? -->
+        <item>Base</item>                     <!-- API 1 -->
+        <item>Base 1.1</item>                 <!-- API 2 -->
+        <item>Cupcake</item>                  <!-- API 3 -->
+        <item>Donut</item>                    <!-- API 4 -->
+        <item>Eclaire</item>                  <!-- API 5 -->
+        <item>Eclair 0.1</item>               <!-- API 6 -->
+        <item>Eclair MR1</item>               <!-- API 7 -->
+        <item>Froyo</item>                    <!-- API 8 -->
+        <item>Gingerbread</item>              <!-- API 9 -->
+        <item>Gingerbread MR1</item>          <!-- API 10 -->
+        <item>Honeycomb</item>                <!-- API 11 -->
+        <item>Honeycomb MR1</item>            <!-- API 12 -->
+        <item>Honeycomb MR2</item>            <!-- API 13 -->
+        <item>Ice Cream Sandwich</item>       <!-- API 14, 4.0 -->
+        <item>Ice Cream Sandwich MR1</item>   <!-- API 15, 4.0.3 -->
+        <item>Jelly Bean</item>               <!-- API 16 -->
+        <item>Jelly Bean MR1</item>           <!-- API 17 -->
+        <item>Unknown Build</item>            <!-- 18+ Key Lime Pie??? -->
     </string-array>
-    
+
 </resources>
