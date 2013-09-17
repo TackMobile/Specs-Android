@@ -99,14 +99,14 @@ public class SpecsActivity extends Activity
 		final Configuration config = getResources().getConfiguration();
 		final DisplayMetrics dm = new DisplayMetrics();
 		final String[] codenames = getResources().getStringArray(R.array.version_code);
-		
+
 		// operating system
 		String sdkVer   = String.valueOf(Build.VERSION.SDK_INT);
 		String release  = Build.VERSION.RELEASE;
 		
 		String codename;
 		if(Build.VERSION.SDK_INT >= codenames.length) {
-			codename = "Codename for " + Build.VERSION.CODENAME;
+			codename = "Codename for " + Build.VERSION.RELEASE;
 		} else {
 			codename = codenames[Math.min(Build.VERSION.SDK_INT-1, codenames.length-1)];
 		}
@@ -175,6 +175,8 @@ public class SpecsActivity extends Activity
 			return getString(R.string.normal);
 		case Configuration.SCREENLAYOUT_SIZE_LARGE:
 			return getString(R.string.large);
+    case Configuration.SCREENLAYOUT_SIZE_XLARGE:
+      return getString(R.string.xlarge);
 		default:
 			return getString(R.string.undefined);
 		}
