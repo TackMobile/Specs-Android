@@ -181,28 +181,29 @@ public class SpecsActivity extends Activity
 			return getString(R.string.undefined);
 		}
 	}
-	
-	private String getDpi(DisplayMetrics dm)
-	{
-		getWindowManager().getDefaultDisplay().getMetrics(dm);
-		
-		switch (dm.densityDpi) {
-		case DisplayMetrics.DENSITY_LOW:
-			return getString(R.string.ldpi);
-		case DisplayMetrics.DENSITY_MEDIUM:
-			return getString(R.string.mdpi);
-		case DisplayMetrics.DENSITY_HIGH:
-			return getString(R.string.hdpi);
-		case DisplayMetrics.DENSITY_XHIGH:
-			return getString(R.string.xhdpi);
-		case DisplayMetrics.DENSITY_TV:
-			return getString(R.string.tvdpi);
-		default:
-			return getString(R.string.unknown_dpi);
-		}
-	}
-	
-	private String getScreenSizePx(DisplayMetrics dm)
+
+  private String getDpi(DisplayMetrics dm) {
+    getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+    switch (dm.densityDpi) {
+      case DisplayMetrics.DENSITY_LOW:
+        return getString(R.string.ldpi);
+      case DisplayMetrics.DENSITY_MEDIUM:
+        return getString(R.string.mdpi);
+      case DisplayMetrics.DENSITY_HIGH:
+        return getString(R.string.hdpi);
+      case DisplayMetrics.DENSITY_XHIGH:
+        return getString(R.string.xhdpi);
+      case DisplayMetrics.DENSITY_XXHIGH:
+        return getString(R.string.xxhdpi);
+      case DisplayMetrics.DENSITY_TV:
+        return getString(R.string.tvdpi);
+      default:
+        return getString(R.string.unknown_dpi);
+    }
+  }
+
+  private String getScreenSizePx(DisplayMetrics dm)
 	{
 		return dm.widthPixels + "px by " + dm.heightPixels + "px";
 	}
