@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 22
+  buildToolsVersion '22.0.1'
+
+  signingConfigs {
+    debug {
+      //storeFile file("debug.keystore")
+    }
+    release {}
+  }
+
+  buildTypes {
+    debug {
+      versionNameSuffix " Debug"
+    }
+
+    release {
+      minifyEnabled false
+//      proguardFile getDefaultProguardFile('proguard-android.txt')
+    }
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+
+  if (project.hasProperty('tackmobileKeystoreAlias') &&
+      project.hasProperty('tackmobileKeystorePass') &&
+      project.hasProperty('tackmobileKeystore')) {
+    android.buildTypes.release.signingConfig signingConfigs.release
+    android.signingConfigs.release.storeFile = file(tackmobileKeystore)
+    android.signingConfigs.release.storePassword = tackmobileKeystorePass
+    android.signingConfigs.release.keyAlias = tackmobileKeystoreAlias
+    android.signingConfigs.release.keyPassword = tackmobileKeystorePass
+  }
+}

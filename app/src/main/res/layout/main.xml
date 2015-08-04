@@ -136,10 +136,10 @@
 
                     <TextView
                         style="@style/ListItem"
-                        android:text="@string/resoultion" />
+                        android:text="@string/resolution" />
 
                     <TextView
-                        android:id="@+id/dpi_qual_text"
+                        android:id="@+id/res_text"
                         style="@style/ListValue" />
                 </TableRow>
 

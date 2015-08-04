@@ -13,12 +13,16 @@
   <string name="large">LARGE</string>
   <string name="xlarge">XLARGE</string>
   <string name="undefined">UNDEFINED</string>
-  <string name="resoultion">Resolution</string>
-  <string name="ldpi">LDPI</string>
-  <string name="mdpi">MDPI</string>
-  <string name="hdpi">HDPI</string>
-  <string name="xhdpi">XHDPI</string>
-  <string name="xxhdpi">XXHDPI</string>
+  <string name="resolution">Resolution</string>
+  <string name="density_ldpi">LDPI</string>
+  <string name="density_mdpi">MDPI</string>
+  <string name="density_hdpi">HDPI</string>
+  <string name="density_280dpi">280 DPI, intermediary between H and X</string>
+  <string name="density_xhdpi">XHDPI</string>
+  <string name="density_400dpi">400 DPI, intermediary between X and XX</string>
+  <string name="density_xxhdpi">XXHDPI</string>
+  <string name="density_560dpi">560 DPI, intermediary between XX and XXX</string>
+  <string name="density_xxxhdpi">XXXHDPI</string>
   <string name="tvdpi">TVDPI</string>
   <string name="unknown_dpi">\?DPI</string>
   <string name="dpi">DPI</string>
@@ -35,7 +39,7 @@
     <item>Base 1.1</item>                 <!-- API 2 -->
     <item>Cupcake</item>                  <!-- API 3 -->
     <item>Donut</item>                    <!-- API 4 -->
-    <item>Eclaire</item>                  <!-- API 5 -->
+    <item>Eclair</item>                   <!-- API 5 -->
     <item>Eclair 0.1</item>               <!-- API 6 -->
     <item>Eclair MR1</item>               <!-- API 7 -->
     <item>Froyo</item>                    <!-- API 8 -->
@@ -47,10 +51,13 @@
     <item>Ice Cream Sandwich</item>       <!-- API 14, 4.0 -->
     <item>Ice Cream Sandwich MR1</item>   <!-- API 15, 4.0.3 -->
     <item>Jelly Bean</item>               <!-- API 16 -->
-    <item>Jelly Bean MR1: Moar jelly beans!</item>        <!-- API 17 -->
-    <item>Jelly Bean MR2, the revenge of the beans.</item><!-- API 18 -->
-    <item>KitKat, another tasty treat.</item>             <!-- API 19 -->
-    <item>Unknown Build</item>            <!-- API 20+ -->
+    <item>Jelly Bean MR1: Moar jelly beans!</item>        <!-- API 17, 4.2,4.2.2 -->
+    <item>Jelly Bean MR2, the revenge of the beans.</item><!-- API 18, 4.3 -->
+    <item>KitKat, another tasty treat.</item>             <!-- API 19, 4.4 -->
+    <item>KitKat for watches, snacks on the run.</item>   <!-- API 20, 4.4W -->
+    <item>Lollipop</item>                 <!-- API 21, 5.0 -->
+    <item>Lollipop with an extra sugar coating on the outside!</item>  <!-- API 22, 5.1-5.1.1 -->
+    <!--<item>Android M</item>                &lt;!&ndash; API 22, Android M &ndash;&gt;-->
   </string-array>
 
 </resources>
