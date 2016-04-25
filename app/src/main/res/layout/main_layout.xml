@@ -199,6 +199,19 @@
 
                     <TextView
                         style="@style/ListItem"
+                        android:text="@string/orientation" />
+
+                    <TextView
+                        android:id="@+id/orientation_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
                         android:text="@string/size" />
 
                     <TextView
@@ -212,17 +225,13 @@
 
                     <TextView
                         style="@style/ListItem"
-                        android:text="@string/resolution"
-                        android:gravity="top"
-                        android:layout_span="2" />
+                        android:text="@string/refresh_rate" />
 
                     <TextView
-                        android:id="@+id/res_text"
+                        android:id="@+id/refresh_rate"
                         style="@style/ListValue"
-                        android:layout_width="match_parent"
-                        android:maxLines="2"
                         android:gravity="right"
-                        android:layout_span="2"/>
+                        android:layout_span="2" />
                 </TableRow>
 
                 <TableRow style="@style/ListRow" >
@@ -271,6 +280,23 @@
                         style="@style/ListValue"
                         android:gravity="right"
                         android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/resolution"
+                        android:gravity="top"
+                        android:layout_span="2" />
+
+                    <TextView
+                        android:id="@+id/res_text"
+                        style="@style/ListValue"
+                        android:layout_width="match_parent"
+                        android:maxLines="2"
+                        android:gravity="right"
+                        android:layout_span="2"/>
                 </TableRow>
 
             </TableLayout>

@@ -1,8 +1,11 @@
 package com.tackmobile.specs.Utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 import com.tackmobile.specs.R;
 
@@ -71,6 +74,24 @@ public class ScreenUtils {
     public String getScreenSizeDp(DisplayMetrics dm) {
         return ((int) (dm.widthPixels / dm.density)) + "dp by " +
                 ((int) (dm.heightPixels / dm.density)) + "dp";
+    }
+
+    public String getOrientation() {
+        int orient = mActivity.getResources().getConfiguration().orientation;
+        if (orient == 1) {
+            return "Portrait";
+        } else if (orient == 2) {
+            return "Landscape";
+        }
+        return null;
+    }
+
+    public String getRefreshRate() {
+        Display display = ((WindowManager) mActivity
+                .getSystemService(Context.WINDOW_SERVICE))
+                .getDefaultDisplay();
+        float refreshRating = display.getRefreshRate();
+        return String.valueOf(refreshRating) + " Hz";
     }
 
 }

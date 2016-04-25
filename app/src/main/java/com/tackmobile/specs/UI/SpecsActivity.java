@@ -1,5 +1,6 @@
 package com.tackmobile.specs.UI;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
@@ -22,6 +23,8 @@ import com.tackmobile.specs.Stat;
 import com.tackmobile.specs.Utils.DeviceUtils;
 import com.tackmobile.specs.Utils.ScreenUtils;
 import com.tackmobile.specs.Utils.StorageUtils;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -193,7 +196,11 @@ public class SpecsActivity extends AppCompatActivity {
     String whPx = screenUtils.getScreenSizePx(dm);
     String whDp = screenUtils.getScreenSizeDp(dm);
     String dx = String.valueOf(dm.density);
+    String orientation = screenUtils.getOrientation();
+    String refresh = screenUtils.getRefreshRate();
 
+    TextView orientView = (TextView) findViewById(R.id.orientation_text);
+    TextView refreshView = (TextView) findViewById(R.id.refresh_rate);
     TextView sizeView = (TextView) findViewById(R.id.size_text);
     TextView resView = (TextView) findViewById(R.id.res_text);
     TextView dpiView = (TextView) findViewById(R.id.dpi_text);
@@ -201,6 +208,8 @@ public class SpecsActivity extends AppCompatActivity {
     TextView whDpView = (TextView) findViewById(R.id.width_height_dp_text);
     TextView dxView = (TextView) findViewById(R.id.dx_text);
 
+    screenStats.add(new Stat(this, R.string.orientation, orientation, orientView));
+    screenStats.add(new Stat(this, R.string.refresh_rate, refresh, refreshView));
     screenStats.add(new Stat(this, R.string.size, size, sizeView));
     screenStats.add(new Stat(this, R.string.resolution, res, resView));
     screenStats.add(new Stat(this, R.string.dpi, dpi, dpiView));

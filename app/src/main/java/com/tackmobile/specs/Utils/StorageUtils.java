@@ -29,10 +29,10 @@ public class StorageUtils {
         String suffix = null;
 
         if (size >= 1024) {
-            suffix = " KB";
+            suffix = " Kb";
             size /= 1024;
             if (size >= 1024) {
-                suffix = " MB";
+                suffix = " Mb";
                 size /= 1024;
             }
         }

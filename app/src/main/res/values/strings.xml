@@ -8,20 +8,20 @@
   <string name="locale">Locale</string>
   <string name="screen">SCREEN</string>
   <string name="size">Size</string>
-  <string name="small">SMALL</string>
-  <string name="normal">NORMAL</string>
-  <string name="large">LARGE</string>
-  <string name="xlarge">XLARGE</string>
-  <string name="undefined">UNDEFINED</string>
+  <string name="small">Small</string>
+  <string name="normal">Normal</string>
+  <string name="large">Large</string>
+  <string name="xlarge">XLarge</string>
+  <string name="undefined">Undefined</string>
   <string name="resolution">Resolution</string>
   <string name="density_ldpi">LDPI</string>
   <string name="density_mdpi">MDPI</string>
   <string name="density_hdpi">HDPI</string>
-  <string name="density_280dpi">280 DPI, intermediary between H and X</string>
+  <string name="density_280dpi">280 DPI, Between H and X</string>
   <string name="density_xhdpi">XHDPI</string>
-  <string name="density_400dpi">400 DPI, intermediary between X and XX</string>
+  <string name="density_400dpi">400 DPI, Between X and XX</string>
   <string name="density_xxhdpi">XXHDPI</string>
-  <string name="density_560dpi">560 DPI, intermediary between XX and XXX</string>
+  <string name="density_560dpi">560 DPI, Between XX and XXX</string>
   <string name="density_xxxhdpi">XXXHDPI</string>
   <string name="tvdpi">TVDPI</string>
   <string name="unknown_dpi">\?DPI</string>
@@ -39,6 +39,8 @@
   <string name="model">Model</string>
   <string name="totalStorage">Total Storage</string>
   <string name="usedStorage">Remaining Storage</string>
+  <string name="orientation">Orientation</string>
+  <string name="refresh_rate">Refresh Rate</string>
 
 
   <string-array name="version_code">
