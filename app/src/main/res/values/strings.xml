@@ -34,8 +34,12 @@
   <string name="send_device_specs">Send Device Specs</string>
   <string name="gathered_by_specs">Gathered by Specs</string>
   <string name="device">DEVICE</string>
+  <string name="storage">STORAGE</string>
   <string name="make">Make</string>
   <string name="model">Model</string>
+  <string name="totalStorage">Total Storage</string>
+  <string name="usedStorage">Remaining Storage</string>
+
 
   <string-array name="version_code">
     <item>Base</item>                     <!-- API 1 -->

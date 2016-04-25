@@ -136,6 +136,50 @@
             </TableLayout>
 
             <TableLayout
+                android:id="@+id/storage_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2"
+                android:paddingTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/ListHeader"
+                        android:text="@string/storage" />
+                </TableRow>
+
+                <View style="@style/ListSeparator" />
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/totalStorage" />
+
+                    <TextView
+                        android:id="@+id/total_storage"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/usedStorage" />
+
+                    <TextView
+                        android:id="@+id/remainingStorage"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
                 android:id="@+id/screen_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
