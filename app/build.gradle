@@ -1,45 +1,52 @@
 apply plugin: 'com.android.application'
-
 android {
-  compileSdkVersion 22
-  buildToolsVersion '22.0.1'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
 
-  defaultConfig {
-    minSdkVersion 4
-    targetSdkVersion 22
-    versionCode 7
-    versionName '1.5'
-  }
-
-  signingConfigs {
-    debug {
-      //storeFile file("debug.keystore")
-    }
-    release {}
-  }
-
-  buildTypes {
-    debug {
-      versionNameSuffix " Debug"
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 7
+        versionName '1.5'
     }
 
-    release {
-      minifyEnabled false
+    signingConfigs {
+        debug {
+            //storeFile file("debug.keystore")
+        }
+        release {}
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix " Debug"
+        }
+
+        release {
+            minifyEnabled false
 //      proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
     }
-  }
 
-  lintOptions {
-    abortOnError false
-  }
+    lintOptions {
+        abortOnError false
+    }
 
-  if (project.hasProperty('tackmobileKeystoreAlias') &&
-      project.hasProperty('tackmobileKeystorePass') &&
-      project.hasProperty('tackmobileKeystore')) {
-    android.buildTypes.release.signingConfig signingConfigs.release
-    android.signingConfigs.release.storeFile = file(tackmobileKeystore)
-    android.signingConfigs.release.storePassword = tackmobileKeystorePass
-    android.signingConfigs.release.keyAlias = tackmobileKeystoreAlias
-    android.signingConfigs.release.keyPassword = tackmobileKeystorePass
-  }
+    if (project.hasProperty('tackmobileKeystoreAlias') &&
+            project.hasProperty('tackmobileKeystorePass') &&
+            project.hasProperty('tackmobileKeystore')) {
+        android.buildTypes.release.signingConfig signingConfigs.release
+        android.signingConfigs.release.storeFile = file(tackmobileKeystore)
+        android.signingConfigs.release.storePassword = tackmobileKeystorePass
+        android.signingConfigs.release.keyAlias = tackmobileKeystoreAlias
+        android.signingConfigs.release.keyPassword = tackmobileKeystorePass
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:support-v13:23.3.0'
+    compile 'com.roughike:bottom-bar:1.3.3'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

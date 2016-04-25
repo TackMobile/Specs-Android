@@ -33,6 +33,9 @@
   <string name="font_scale">Font Scale</string>
   <string name="send_device_specs">Send Device Specs</string>
   <string name="gathered_by_specs">Gathered by Specs</string>
+  <string name="device">DEVICE</string>
+  <string name="make">Make</string>
+  <string name="model">Model</string>
 
   <string-array name="version_code">
     <item>Base</item>                     <!-- API 1 -->
@@ -57,7 +60,8 @@
     <item>KitKat for watches, snacks on the run.</item>   <!-- API 20, 4.4W -->
     <item>Lollipop</item>                 <!-- API 21, 5.0 -->
     <item>Lollipop with an extra sugar coating on the outside!</item>  <!-- API 22, 5.1-5.1.1 -->
-    <!--<item>Android M</item>                &lt;!&ndash; API 22, Android M &ndash;&gt;-->
+    <item>Marshmallow</item>                <!-- API 23, 6.0-6.1 -->
+    <item>Android N</item>                  <!-- API 24, 7.0 -->
   </string-array>
 
 </resources>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="tack_blue">#0099CC</color>
-    <color name="grey">#FF909090</color>
+    <color name="primary">#1292c6</color>
+    <color name="primaryDark">#0f79a3</color>
+    <color name="accent">#ffa64d</color>
+
+    <color name="tack_blue">#1292C6</color>
+    <color name="grey">#9b9b9b</color>
+    <color name="white">#FFFFFF</color>
 </resources>
