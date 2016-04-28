@@ -1,6 +1,5 @@
 package com.tackmobile.specs.UI;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
@@ -23,8 +22,6 @@ import com.tackmobile.specs.Stat;
 import com.tackmobile.specs.Utils.DeviceUtils;
 import com.tackmobile.specs.Utils.ScreenUtils;
 import com.tackmobile.specs.Utils.StorageUtils;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -96,8 +93,16 @@ public class SpecsActivity extends AppCompatActivity {
 
   public void share() {
     final StringBuilder sb = new StringBuilder();
-    sb.append(getString(R.string.operating_system)).append("\n");
+    sb.append("\n").append(getString(R.string.device)).append("\n");
+    for (Stat s : deviceStats) {
+      sb.append(s.getName()).append(": ").append(s.getValue()).append("\n");
+    }
+    sb.append("\n").append(getString(R.string.operating_system)).append("\n");
     for (Stat s : osStats) {
+      sb.append(s.getName()).append(": ").append(s.getValue()).append("\n");
+    }
+    sb.append("\n").append(getString(R.string.storage)).append("\n");
+    for (Stat s : storageStats) {
       sb.append(s.getName()).append(": ").append(s.getValue()).append("\n");
     }
     sb.append("\n").append(getString(R.string.screen)).append("\n");
@@ -244,4 +249,5 @@ public class SpecsActivity extends AppCompatActivity {
     share();
     return super.onOptionsItemSelected(item);
   }
+
 }

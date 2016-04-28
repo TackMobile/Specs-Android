@@ -41,6 +41,9 @@
   <string name="usedStorage">Remaining Storage</string>
   <string name="orientation">Orientation</string>
   <string name="refresh_rate">Refresh Rate</string>
+  <string name="camera">CAMERA</string>
+  <string name="camera_front">Front</string>
+  <string name="camera_back">Back</string>
 
 
   <string-array name="version_code">

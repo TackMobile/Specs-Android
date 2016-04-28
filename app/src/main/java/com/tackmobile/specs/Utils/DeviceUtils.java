@@ -10,7 +10,9 @@ public class DeviceUtils {
     public  static String getDeviceName() {
         String manufacturer = Build.MANUFACTURER;
         String model = Build.MODEL;
-        if (model.startsWith(manufacturer)) {
+
+        if (model.startsWith(manufacturer.toUpperCase()) || model.startsWith(manufacturer) ||
+                model.startsWith(capitalize(manufacturer))) {
             return capitalize(model);
         } else {
             return capitalize(manufacturer) + " " + model;
