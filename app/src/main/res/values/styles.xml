@@ -25,6 +25,10 @@
     </style>
     <style name="ListValue">
         <item name="android:textColor">@color/tack_blue</item>
+        <item name="android:paddingRight">10dp</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 </resources>

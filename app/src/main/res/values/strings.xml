@@ -8,20 +8,20 @@
   <string name="locale">Locale</string>
   <string name="screen">SCREEN</string>
   <string name="size">Size</string>
-  <string name="small">SMALL</string>
-  <string name="normal">NORMAL</string>
-  <string name="large">LARGE</string>
-  <string name="xlarge">XLARGE</string>
-  <string name="undefined">UNDEFINED</string>
+  <string name="small">Small</string>
+  <string name="normal">Normal</string>
+  <string name="large">Large</string>
+  <string name="xlarge">XLarge</string>
+  <string name="undefined">Undefined</string>
   <string name="resolution">Resolution</string>
   <string name="density_ldpi">LDPI</string>
   <string name="density_mdpi">MDPI</string>
   <string name="density_hdpi">HDPI</string>
-  <string name="density_280dpi">280 DPI, intermediary between H and X</string>
+  <string name="density_280dpi">280 DPI, Between H and X</string>
   <string name="density_xhdpi">XHDPI</string>
-  <string name="density_400dpi">400 DPI, intermediary between X and XX</string>
+  <string name="density_400dpi">400 DPI, Between X and XX</string>
   <string name="density_xxhdpi">XXHDPI</string>
-  <string name="density_560dpi">560 DPI, intermediary between XX and XXX</string>
+  <string name="density_560dpi">560 DPI, Between XX and XXX</string>
   <string name="density_xxxhdpi">XXXHDPI</string>
   <string name="tvdpi">TVDPI</string>
   <string name="unknown_dpi">\?DPI</string>
@@ -33,6 +33,18 @@
   <string name="font_scale">Font Scale</string>
   <string name="send_device_specs">Send Device Specs</string>
   <string name="gathered_by_specs">Gathered by Specs</string>
+  <string name="device">DEVICE</string>
+  <string name="storage">STORAGE</string>
+  <string name="make">Make</string>
+  <string name="model">Model</string>
+  <string name="totalStorage">Total Storage</string>
+  <string name="usedStorage">Remaining Storage</string>
+  <string name="orientation">Orientation</string>
+  <string name="refresh_rate">Refresh Rate</string>
+  <string name="camera">CAMERA</string>
+  <string name="camera_front">Front</string>
+  <string name="camera_back">Back</string>
+
 
   <string-array name="version_code">
     <item>Base</item>                     <!-- API 1 -->
@@ -57,7 +69,8 @@
     <item>KitKat for watches, snacks on the run.</item>   <!-- API 20, 4.4W -->
     <item>Lollipop</item>                 <!-- API 21, 5.0 -->
     <item>Lollipop with an extra sugar coating on the outside!</item>  <!-- API 22, 5.1-5.1.1 -->
-    <!--<item>Android M</item>                &lt;!&ndash; API 22, Android M &ndash;&gt;-->
+    <item>Marshmallow</item>                <!-- API 23, 6.0-6.1 -->
+    <item>Android N</item>                  <!-- API 24, 7.0 -->
   </string-array>
 
 </resources>

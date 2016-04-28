@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomBarItemOne"
+        android:icon="@drawable/ic_device_24dp"
+        android:title="Device" />
+
+    <item
+        android:id="@+id/bottomBarItemTwo"
+        android:icon="@drawable/ic_screen_24dp"
+        android:title="Screen" />
+
+    <item
+        android:id="@+id/bottomBarItemThree"
+        android:icon="@drawable/ic_more_horiz_black_24dp"
+        android:title="Other" />
+
+</menu>

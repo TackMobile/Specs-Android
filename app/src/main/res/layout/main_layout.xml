@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/spec_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ebeaea">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:id="@+id/device_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2"
+                android:paddingTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/ListHeader"
+                        android:text="@string/device" />
+                </TableRow>
+
+                <View style="@style/ListSeparator" />
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/make" />
+
+                    <TextView
+                        android:id="@+id/device_make"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/ListRow"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/model" />
+
+                    <TextView
+                        android:id="@+id/device_model"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/os_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2"
+                android:paddingTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/ListHeader"
+                        android:text="@string/operating_system" />
+                </TableRow>
+
+                <View style="@style/ListSeparator" />
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/sdk_version" />
+
+                    <TextView
+                        android:id="@+id/sdk_ver_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/ListRow"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/release" />
+
+                    <TextView
+                        android:id="@+id/release_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2"/>
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/codename" />
+
+                    <TextView
+                        android:id="@+id/codename_text"
+                        style="@style/ListValue"
+                        android:ellipsize="marquee"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/locale" />
+
+                    <TextView
+                        android:id="@+id/locale_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/storage_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2"
+                android:paddingTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/ListHeader"
+                        android:text="@string/storage" />
+                </TableRow>
+
+                <View style="@style/ListSeparator" />
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/totalStorage" />
+
+                    <TextView
+                        android:id="@+id/total_storage"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/usedStorage" />
+
+                    <TextView
+                        android:id="@+id/remainingStorage"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/screen_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2"
+                android:paddingTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/ListHeader"
+                        android:text="@string/screen" />
+                </TableRow>
+
+                <View style="@style/ListSeparator" />
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/orientation" />
+
+                    <TextView
+                        android:id="@+id/orientation_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/size" />
+
+                    <TextView
+                        android:id="@+id/size_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/refresh_rate" />
+
+                    <TextView
+                        android:id="@+id/refresh_rate"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/dpi" />
+
+                    <TextView
+                        android:id="@+id/dpi_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2"/>
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/width_height" />
+
+                    <TextView
+                        android:id="@+id/width_height_px_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        android:id="@+id/width_height_dp_text"
+                        style="@style/ListValue"
+                        android:layout_column="2"
+                        android:gravity="right"/>
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/density_multiplier" />
+
+                    <TextView
+                        android:id="@+id/dx_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2" />
+                </TableRow>
+
+                <TableRow style="@style/ListRow" >
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/resolution"
+                        android:gravity="top"
+                        android:layout_span="2" />
+
+                    <TextView
+                        android:id="@+id/res_text"
+                        style="@style/ListValue"
+                        android:layout_width="match_parent"
+                        android:maxLines="2"
+                        android:gravity="right"
+                        android:layout_span="2"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/other_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2"
+                android:paddingTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/ListHeader"
+                        android:text="@string/other" />
+                </TableRow>
+
+                <View style="@style/ListSeparator" />
+
+                <TableRow style="@style/ListRow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content">
+
+                    <TextView
+                        style="@style/ListItem"
+                        android:text="@string/font_scale" />
+
+                    <TextView
+                        android:id="@+id/fontscale_text"
+                        style="@style/ListValue"
+                        android:gravity="right"
+                        android:layout_span="2"/>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="15dp"
+        android:background="@null"
+        android:clickable="true"
+        android:onClick="visitTackWebsite"
+        android:src="@drawable/tack_logo"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
