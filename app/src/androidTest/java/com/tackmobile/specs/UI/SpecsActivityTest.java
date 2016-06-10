@@ -28,6 +28,8 @@ public class SpecsActivityTest {
     @Rule
     public ActivityTestRule<SpecsActivity> mActivityTestRule = new ActivityTestRule<>(SpecsActivity.class);
 
+    //TODO: This is just hard-coded for now, but these assertions shouldn't be dependent on a specific device
+    // running this test
     @Test
     public void specsActivityTest() {
         ViewInteraction linearLayout = onView(
