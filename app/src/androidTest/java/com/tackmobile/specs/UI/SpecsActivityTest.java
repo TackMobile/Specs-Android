@@ -8,9 +8,13 @@ import android.test.suitebuilder.annotation.LargeTest;
 
 import com.tackmobile.specs.R;
 
+import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import tools.fastlane.screengrab.Screengrab;
+import tools.fastlane.screengrab.locale.LocaleTestRule;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -28,6 +32,9 @@ public class SpecsActivityTest {
     @Rule
     public ActivityTestRule<SpecsActivity> mActivityTestRule = new ActivityTestRule<>(SpecsActivity.class);
 
+    @ClassRule
+    public static final LocaleTestRule localeTestRule = new LocaleTestRule();
+
     //TODO: This is just hard-coded for now, but these assertions shouldn't be dependent on a specific device
     // running this test
     @Test
@@ -42,5 +49,7 @@ public class SpecsActivityTest {
         onView(withId(R.id.size_text)).check(matches(withText("Normal")));
         onView(withId(R.id.dpi_text)).check(matches(withText("480")));
         onView(withId(R.id.res_text)).check(matches(withText("XXHDPI")));
+
+        Screengrab.screenshot("testScreenShot");
     }
 }
