@@ -6,4 +6,6 @@ pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
-          - ./gradlew build
+          - echo "Starting"
+          - ls /opt/atlassian/bitbucketci/agent/build
+          # - ./gradlew build
