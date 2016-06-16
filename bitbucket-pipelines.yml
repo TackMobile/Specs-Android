@@ -8,4 +8,4 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - echo "Starting"
           - ls /opt/atlassian/bitbucketci/agent/build
-          # - ./gradlew build
+          - /opt/atlassian/bitbucketci/agent/build/gradlew build
