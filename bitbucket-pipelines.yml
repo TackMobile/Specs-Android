@@ -1,6 +1,6 @@
 # You can use a Docker image from Docker Hub or your own container
 # registry for your build environment.
-image: uber/android-build-environment
+image: jalla/android24
 
 pipelines:
   default:
