@@ -1,6 +1,6 @@
 # You can use a Docker image from Docker Hub or your own container
 # registry for your build environment.
-image: jalla/android24
+image: comptel/android-build
 
 pipelines:
   default:
