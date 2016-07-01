@@ -1,11 +1,13 @@
 # You can use a Docker image from Docker Hub or your own container
 # registry for your build environment. 
-image: wasabeef/android
+image: beevelop/android
 
 pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
           - echo "Starting"
-          - ls /opt/atlassian/bitbucketci/agent/build
+          - ls
           - /opt/atlassian/bitbucketci/agent/build/gradlew --stacktrace build
+          
+          
